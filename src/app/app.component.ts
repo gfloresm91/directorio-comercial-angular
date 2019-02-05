@@ -7,16 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directorio comercial angular';
-  deshabilitado = true;
-  name = '';
+  // :any is typescript nomenclature
+  lugares: any = [
+    { nombre: 'Veterinaría Pet\'s Shop' },
+    { nombre: 'Restaurant Subterra' },
+    { nombre: 'Minería Chifón del Diablo' },
+  ];
 
   constructor() {
-    setTimeout(() => {
-      this.deshabilitado = false;
-    }, 3000);
-  }
-
-  hacerAlgo() {
-    alert('Click');
   }
 }

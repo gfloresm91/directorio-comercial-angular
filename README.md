@@ -7,7 +7,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - String interpolation
 - Property binding
 - Event binding
-- Two way data binding
+- Directiva estructural: ngFor
 
 ## Instalación
 
