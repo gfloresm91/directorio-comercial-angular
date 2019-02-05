@@ -9,4 +9,10 @@
 
   <button [disabled]="deshabilitado" (click)="hacerAlgo()">Haz click</button>
 
+  <hr>
+
+  <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" [(ngModel)]="name">
+  <br>
+  El nombre ingresado es {{name}}
+
 </div>

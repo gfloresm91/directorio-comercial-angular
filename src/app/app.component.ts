@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'directorio comercial angular';
   deshabilitado = true;
+  name = '';
 
   constructor() {
     setTimeout(() => {
