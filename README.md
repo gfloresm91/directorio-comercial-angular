@@ -8,6 +8,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Property binding
 - Event binding
 - Directiva estructural: ngFor
+- Directiva estructural: ngIf
 
 ## Instalación
 

@@ -9,9 +9,9 @@ export class AppComponent {
   title = 'directorio comercial angular';
   // :any is typescript nomenclature
   lugares: any = [
-    { nombre: 'Veterinaría Pet\'s Shop' },
-    { nombre: 'Restaurant Subterra' },
-    { nombre: 'Minería Chifón del Diablo' },
+    { activo: true, nombre: 'Veterinaría Pet\'s Shop' },
+    { activo: false, nombre: 'Restaurant Subterra' },
+    { activo: true, nombre: 'Minería Chifón del Diablo' },
   ];
 
   constructor() {
