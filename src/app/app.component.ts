@@ -13,6 +13,8 @@ export class AppComponent {
     { activo: false, nombre: 'Restaurant Subterra' },
     { activo: true, nombre: 'Minería Chifón del Diablo' },
   ];
+  lat = -37.092811;
+  lng = -73.163460;
 
   constructor() {
   }
