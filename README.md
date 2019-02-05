@@ -4,6 +4,10 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 
 ## Conceptos vistos
 
+- String interpolation
+- Property binding
+- Event binding
+
 ## Instalación
 
 ```bash
