@@ -7,11 +7,13 @@ import { AgmCoreModule } from '@agm/core';
 
 import { environment } from './../environments/environment';
 import { ResaltarDirective } from './directives/resaltar.directive';
+import { ContarClicksDirective } from './directives/contar-click.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResaltarDirective
+    ResaltarDirective,
+    ContarClicksDirective
   ],
   imports: [
     BrowserModule,
