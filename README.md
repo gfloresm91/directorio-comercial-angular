@@ -11,6 +11,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Directiva estructural: ngIf
 - Angular maps con google maps
 - Directivas ngStyle y ngClass
+- Directiva ngSwitch
 
 ## Instalación
 
