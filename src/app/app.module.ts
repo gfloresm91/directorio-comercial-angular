@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 
 import { environment } from './../environments/environment';
+import { ResaltarDirective } from './directives/resaltar.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltarDirective
   ],
   imports: [
     BrowserModule,

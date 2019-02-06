@@ -12,6 +12,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Angular maps con google maps
 - Directivas ngStyle y ngClass
 - Directiva ngSwitch
+- Directiva de atributo
 
 ## Instalación
 
