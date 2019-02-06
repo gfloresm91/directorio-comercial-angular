@@ -13,7 +13,8 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Directivas ngStyle y ngClass
 - Directiva ngSwitch
 - Directiva de atributo
-- Host listener
+- Host listeners
+- Host binders
 
 ## Instalación
 

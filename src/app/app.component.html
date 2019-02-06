@@ -15,8 +15,8 @@
 
 <ul>
   <ng-container *ngFor="let lugar of lugares; let i = index" [ngSwitch]="lugar.cercania">
-    <a appContarClicks>
-      <li [ngStyle]="{color: (lugar.activo) ? 'black' : 'grey'}"
+    <a>
+      <li appContarClicks [ngStyle]="{color: (lugar.activo) ? 'black' : 'grey'}"
         [ngClass]="{'numero-par': (i+1) % 2 !== 0}"
         [appResaltar]="lugar.plan">
 
