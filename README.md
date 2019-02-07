@@ -15,6 +15,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Directiva de atributo
 - Host listeners
 - Host binders
+- Angular bootstrap
 
 ## Instalación
 
