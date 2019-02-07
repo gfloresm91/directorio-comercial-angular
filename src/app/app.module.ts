@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     component: LugaresComponent
   },
   {
-    path: 'detalle',
+    path: 'detalle/:id',
     component: DetalleComponent
   }
 ];
