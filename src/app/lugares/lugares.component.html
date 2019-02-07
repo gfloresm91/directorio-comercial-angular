@@ -10,7 +10,7 @@
       <h2>Lugares activos registrados</h2>
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
-          <a routerLink="/detalle/{{ lugar.id }}">
+          <a routerLink="/detalle/{{ lugar.id }}" [queryParams]="{ action:'view' }">
             <li class="list-group-item" *ngIf="lugar.activo">{{ lugar.nombre }}</li>
           </a>
         </ng-container>

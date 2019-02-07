@@ -18,6 +18,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Angular bootstrap
 - Angular router
 - Routerlink
+- Parámetros en ruta y tipo query
 
 ## Instalación
 
