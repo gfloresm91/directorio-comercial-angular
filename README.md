@@ -17,6 +17,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Host binders
 - Angular bootstrap
 - Angular router
+- Routerlink
 
 ## Instalación
 
