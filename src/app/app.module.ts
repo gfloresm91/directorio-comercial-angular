@@ -14,6 +14,9 @@ import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LugaresService } from './services/lugares.service';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -47,7 +50,10 @@ const appRoutes: Routes = [
     AgmCoreModule.forRoot({
       apiKey: environment.API_KEY
     }),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     LugaresService
