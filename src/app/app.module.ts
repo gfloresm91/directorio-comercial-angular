@@ -13,10 +13,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LugaresComponent } from './lugares/lugares.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { LugaresService } from './services/lugares.service';
+import { CrearComponent } from './crear/crear.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { CrearComponent } from './crear/crear.component';
+import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 
 const appRoutes: Routes = [
   {
@@ -59,10 +60,12 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
-    LugaresService
+    LugaresService,
+    AngularFireDatabase
   ],
   bootstrap: [AppComponent]
 })

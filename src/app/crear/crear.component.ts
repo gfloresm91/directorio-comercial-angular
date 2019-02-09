@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LugaresService } from '../services/lugares.service';
 
 @Component({
   selector: 'app-crear',
@@ -6,8 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear.component.css']
 })
 export class CrearComponent implements OnInit {
+  lugar: any = {};
 
-  constructor() { }
+  constructor(private lugaresService: LugaresService) { }
+
+  guardarLugar() {
+    this.lugar.id = Date.now();
+    this.lugaresService.guardarLugar(this.lugar);
+    alert('Negocio registrado exitosamente 😉');
+    this.lugar = {};
+  }
 
   ngOnInit() {
   }
