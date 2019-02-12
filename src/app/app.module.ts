@@ -19,6 +19,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/database';
 
+import { HttpClientModule } from '@angular/common/http';
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -37,7 +39,7 @@ const appRoutes: Routes = [
     component: ContactoComponent
   },
   {
-    path: 'crear',
+    path: 'crear/:id',
     component: CrearComponent
   }
 ];
@@ -61,7 +63,8 @@ const appRoutes: Routes = [
     AngularFireModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   providers: [
     LugaresService,

@@ -6,6 +6,12 @@
 <!-- TODO: This is awful, add design to this -->
 
 <div class="container">
+
+  <div class="page-header">
+    <h1>Datos del negocio</h1>
+  </div>
+  <hr>
+
   <label for="nombre">Nombre</label>
   <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="lugar.nombre">
 
@@ -21,6 +27,11 @@
   <label for="plan">Plan</label>
   <input type="text" name="plan" id="plan" class="form-control" [(ngModel)]="lugar.plan">
 
+  <div class="page-header mt-3">
+    <h1>Dirección</h1>
+  </div>
+  <hr>
+
   <label for="calleynumero">Calle y número</label>
   <input type="text" name="calleynumero" id="calleynumero" class="form-control" [(ngModel)]="lugar.calleynumero">
 
@@ -29,6 +40,16 @@
 
   <label for="pais">País</label>
   <input type="text" name="pais" id="pais" class="form-control" [(ngModel)]="lugar.pais">
+
+  <div class="page-header mt-3">
+    <h1>Geolocalización <small>En caso de que google maps fallé</small></h1>
+  </div>
+  <hr>
+
+  <label for="lat">Latitud</label>
+  <input type="text" name="lat" id="lat" class="form-control" [(ngModel)]="latitud">
+  <label for="lng">Longitud</label>
+  <input type="text" name="lng" id="lng" class="form-control" [(ngModel)]="longitud">
 
   <hr>
   <a class="btn btn-primary mr-2" tabindex="-1" role="button" aria-disabled="true" (click)="guardarLugar()">Enviar</a>

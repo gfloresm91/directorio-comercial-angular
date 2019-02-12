@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class LugaresService {
@@ -34,10 +36,14 @@ export class LugaresService {
     },
   ];
 
-  constructor(private afDB: AngularFireDatabase) { }
+  constructor(private afDB: AngularFireDatabase, private http: HttpClient) { }
 
   public getLugares() {
     return this.afDB.list('lugares/');
+  }
+
+  public getLugar(id) {
+    return this.afDB.object(`lugares/${id}`);
   }
 
   public buscarLugar(id) {
@@ -46,5 +52,15 @@ export class LugaresService {
 
   public guardarLugar(lugar) {
     this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);
+  }
+
+  public editarLugar(lugar) {
+    this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);
+  }
+
+  public obtenerGeoData(direccion) {
+    return this.http.get(
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=${environment.MAPS_API_KEY}`
+      );
   }
 }

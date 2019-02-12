@@ -1,5 +1,5 @@
 <agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker *ngFor="let lugar of lugares" [latitude]="lugar.lat" [longitude]="lugar.lng"></agm-marker>
 </agm-map>
 
 <hr>
@@ -10,12 +10,12 @@
       <h2>Lugares activos registrados</h2>
 
       <div class="text-right mb-2">
-        <a class="btn btn-primary" routerLink="/crear">Registrar nuevo negocio</a>
+        <a class="btn btn-primary" routerLink="/crear/new">Registrar nuevo negocio</a>
       </div>
 
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
-          <a routerLink="/detalle/{{ lugar.id }}" [queryParams]="{ action:'view' }">
+          <a routerLink="/crear/{{ lugar.id }}">
             <li class="list-group-item">{{ lugar.nombre }}</li>
           </a>
         </ng-container>
