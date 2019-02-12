@@ -11,7 +11,10 @@ export class LugaresService {
   constructor(private afDB: AngularFireDatabase, private http: HttpClient) { }
 
   public getLugares() {
-    return this.afDB.list('lugares/');
+    // return this.afDB.list('lugares/');
+    return this.http.get(
+      environment.firebase.databaseURL + '/lugares.json'
+    );
   }
 
   public getLugar(id) {

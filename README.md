@@ -21,7 +21,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Parámetros en ruta y tipo query
 - Servicios
 - Angular firebase
-- Llamado HTTP Post
+- Llamados HTTP Post y Get
 
 ## Instalación
 
