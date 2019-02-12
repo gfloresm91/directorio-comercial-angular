@@ -3,6 +3,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
+import { map } from 'rxjs/operators';
+
 @Injectable()
 export class LugaresService {
   // :any is typescript nomenclature
@@ -13,8 +15,11 @@ export class LugaresService {
   public getLugares() {
     // return this.afDB.list('lugares/');
     return this.http.get(
-      environment.firebase.databaseURL + '/lugares.json'
-    );
+      environment.firebase.databaseURL + '/.json'
+    ).pipe(map((resultado) => {
+      const data = resultado[`lugares`];
+      return data;
+    }));
   }
 
   public getLugar(id) {
