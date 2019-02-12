@@ -1,40 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class LugaresService {
   // :any is typescript nomenclature
-  lugares: any = [
-    {
-      id: 1,
-      plan: 'pagado',
-      cercania: 1,
-      distancia: 1,
-      activo: true,
-      nombre: 'Veterinaría Pet\'s Shop',
-      descripcion: 'Descripción de ejemplo del negocio'
-    },
-    {
-      id: 2,
-      plan: 'gratuito',
-      cercania: 2,
-      distancia: 5,
-      activo: false,
-      nombre: 'Restaurant Subterra',
-      descripcion: 'Descripción de ejemplo del negocio'
-    },
-    {
-      id: 3,
-      plan: 'gratuito',
-      cercania: 3,
-      distancia: 10,
-      activo: true,
-      nombre: 'Minería Chifón del Diablo',
-      descripcion: 'Descripción de ejemplo del negocio'
-    },
-  ];
+  lugares: any = [];
 
   constructor(private afDB: AngularFireDatabase, private http: HttpClient) { }
 
@@ -51,8 +23,11 @@ export class LugaresService {
   }
 
   public guardarLugar(lugar) {
-    this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);
+    // this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);
+    const headers = new HttpHeaders({'Content-Type' : 'aplication/json'});
+    return this.http.post(environment.firebase.databaseURL + '/lugares.json', lugar, { headers }).subscribe();
   }
+
 
   public editarLugar(lugar) {
     this.afDB.database.ref(`lugares/${lugar.id}`).set(lugar);

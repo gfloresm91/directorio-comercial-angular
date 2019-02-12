@@ -30,7 +30,6 @@ export class CrearComponent implements OnInit {
     // Fucking limit of maps API, cuota exceeded
     this.lugaresService.obtenerGeoData(direccion)
     .subscribe((data) => {
-      debugger;
       this.results = data[`results`];
       if (this.results.length !== 0) {
         this.lugar.lat = this.results[0].geometry.location.lat;
