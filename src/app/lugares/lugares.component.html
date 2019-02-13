@@ -16,7 +16,11 @@
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
           <a routerLink="/crear/{{ lugar.id }}">
-            <li class="list-group-item">{{ lugar.nombre }}</li>
+            <li class="list-group-item">
+              {{ lugar.nombre |uppercase }}
+              <br>
+              <small>Creado: {{ lugar.id |date |uppercase }}</small>
+            </li>
           </a>
         </ng-container>
       </ul>
