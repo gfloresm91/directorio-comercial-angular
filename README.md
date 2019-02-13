@@ -23,6 +23,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Angular firebase
 - Llamados HTTP Post y Get
 - Operador map()
+- Manejo de errores HTTP
 
 ## Instalación
 

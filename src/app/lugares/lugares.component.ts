@@ -18,6 +18,9 @@ export class LugaresComponent {
         this.lugares = Object.keys(this.lugares).map((key) => {
           return this.lugares[key];
         });
+      }, (error) => {
+        console.log(error);
+        alert(`En estos momentos tenemos problemas. Error: ${error.statusText}`);
       });
   }
 }
