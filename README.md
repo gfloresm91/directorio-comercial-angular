@@ -24,7 +24,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Llamados HTTP Post y Get
 - Operador map()
 - Manejo de errores HTTP
-- Pipes por defecto de Angular
+- Pipes por defecto de Angular y personalizados
 
 ## Instalación
 

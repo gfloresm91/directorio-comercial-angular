@@ -21,6 +21,8 @@ export class CrearComponent implements OnInit {
       .valueChanges()
       .subscribe((lugar) => {
         this.lugar = lugar;
+        this.latitud = lugar.lat;
+        this.longitud = lugar.lng;
       });
     }
    }

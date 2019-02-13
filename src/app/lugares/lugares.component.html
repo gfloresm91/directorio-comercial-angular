@@ -17,9 +17,10 @@
         <ng-container *ngFor="let lugar of lugares">
           <a routerLink="/crear/{{ lugar.id }}">
             <li class="list-group-item">
-              {{ lugar.nombre |uppercase }}
+              <h3>{{ lugar.nombre |uppercase }}</h3>
               <br>
               <small>Creado: {{ lugar.id |date:'dd-MM-yyyy HH:mm' |uppercase }}</small>
+              <p [innerHtml]="lugar.descripcion |linkifystr"></p>
             </li>
           </a>
         </ng-container>
