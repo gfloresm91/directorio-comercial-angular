@@ -19,7 +19,7 @@
             <li class="list-group-item">
               {{ lugar.nombre |uppercase }}
               <br>
-              <small>Creado: {{ lugar.id |date |uppercase }}</small>
+              <small>Creado: {{ lugar.id |date:'dd-MM-yyyy HH:mm' |uppercase }}</small>
             </li>
           </a>
         </ng-container>
