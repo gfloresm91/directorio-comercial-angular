@@ -19,7 +19,7 @@ export class CrearComponent implements OnInit {
     if (this.id !== 'new') {
       this.lugaresService.getLugar(this.id)
       .valueChanges()
-      .subscribe((lugar) => {
+      .subscribe((lugar: any) => {
         this.lugar = lugar;
         this.latitud = lugar.lat;
         this.longitud = lugar.lng;

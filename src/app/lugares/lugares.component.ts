@@ -1,14 +1,37 @@
 import { Component } from '@angular/core';
 import { LugaresService } from '../services/lugares.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-lugares',
-  templateUrl: './lugares.component.html'
+  templateUrl: './lugares.component.html',
+  animations: [
+    trigger('contenedorAnimado', [
+      state('inicial', style({
+        opacity: 0,
+        backgroundColor: 'green',
+        transform: 'rotate3d(0,0,0,0deg)'
+      })),
+      state('final', style({
+        opacity: 1,
+        backgroundColor: 'yellow',
+        transform: 'rotate3d(5,10,20,30deg)'
+      })),
+      transition('inicial => final', animate(1000)),
+      transition('final => inicial', animate(500)),
+    ])
+  ]
 })
 export class LugaresComponent {
   title = 'directorio comercial angular';
+  state = 'final';
+
   lat = -37.092811;
   lng = -73.163460;
+
+  animar() {
+    this.state = (this.state === 'final' ? 'inicial' : 'final');
+  }
 
   lugares = null;
   constructor(private lugaresService: LugaresService) {

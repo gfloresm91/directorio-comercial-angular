@@ -25,6 +25,7 @@ En este proyecto se creará una web que almacene y muestre los locales comercial
 - Operador map()
 - Manejo de errores HTTP
 - Pipes por defecto de Angular y personalizados
+- Animaciones y transiciones
 
 ## Instalación
 

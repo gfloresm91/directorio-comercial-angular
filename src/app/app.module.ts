@@ -21,6 +21,7 @@ import { AngularFireDatabase, AngularFireDatabaseModule } from 'angularfire2/dat
 
 import { HttpClientModule } from '@angular/common/http';
 import { LinkifystrPipe } from './pipes/linkifystr.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {
@@ -66,7 +67,8 @@ const appRoutes: Routes = [
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     LugaresService,
