@@ -28,12 +28,22 @@ export class LugaresComponent {
 
   lat = -37.092811;
   lng = -73.163460;
+  lugares = null;
 
   animar() {
     this.state = (this.state === 'final' ? 'inicial' : 'final');
   }
 
-  lugares = null;
+  animacionInicia(evento) {
+    console.log('Evento inicia: ');
+    console.log(evento);
+  }
+
+  animacionTermina(evento) {
+    console.log('Evento termina: ');
+    console.log(evento);
+  }
+
   constructor(private lugaresService: LugaresService) {
     lugaresService.getLugares()
       .subscribe((lugares) => {
